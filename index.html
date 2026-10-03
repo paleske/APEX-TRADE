@@ -2,92 +2,1239 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="theme-color" content="#0f172a">
-<title>APEX TRADE - Legit</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Changamwe Job Finder</title>
+
 <style>
-*{margin:0;padding:0;box-sizing:border-box;font-family:system-ui}
-body{background:#0f172a;color:#fff;min-height:100vh}
-.header{background:#1e293b;padding:12px 16px;display:flex;justify-content:space-between;align-items:center;position:sticky;top:0;z-index:20}
-.logo{font-weight:900;color:#22c55e;font-size:20px}
-.balance{background:#22c55e;color:#000;padding:6px 12px;border-radius:20px;font-weight:700;font-size:13px}
-.auth-wrap{min-height:100vh;display:flex;flex-direction:column;justify-content:center;padding:20px;background:linear-gradient(180deg,#0f172a,#1e293b)}
-.auth-card{background:#1e293b;border-radius:16px;padding:24px;border:1px solid #334155;max-width:400px;margin:0 auto;width:100%}
-.auth-tabs{display:flex;background:#0f172a;border-radius:10px;padding:4px;margin-bottom:20px}
-.auth-tabs div{flex:1;text-align:center;padding:10px;border-radius:8px;cursor:pointer;font-weight:700}
-.auth-tabs div.active{background:#22c55e;color:#000}
-.input{width:100%;padding:14px;border-radius:10px;border:1px solid #334155;background:#0f172a;color:#fff;margin:8px 0;font-size:15px}
-.btn{width:100%;padding:14px;border:none;border-radius:10px;font-weight:800;font-size:16px;cursor:pointer;margin-top:12px}
-.btn-buy{background:#22c55e;color:#000}
-.install-banner{background:#22c55e;color:#000;text-align:center;padding:10px;font-weight:800;font-size:13px;cursor:pointer}
-.nav{display:flex;background:#1e293b;border-top:1px solid #334155;position:fixed;bottom:0;left:0;right:0;z-index:20}
-.nav div{flex:1;text-align:center;padding:12px 0;font-size:11px;cursor:pointer;color:#94a3b8}
-.nav div.active{color:#22c55e;border-top:2px solid #22c55e}
-.page{padding:16px;padding-bottom:80px}
-.card{background:#1e293b;border-radius:12px;padding:16px;margin-bottom:12px;border:1px solid #334155}
-.price{font-size:36px;font-weight:900;margin:8px 0}
-.grid2{display:grid;grid-template-columns:1fr 1fr;gap:10px}
-.badge{background:#22c55e22;color:#22c55e;padding:4px 8px;border-radius:6px;font-size:11px;font-weight:700}
-.small{font-size:12px;color:#94a3b8}
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: #f4f6f8;
+  color: #17202a;
+}
+
+header {
+  background: #0b5ed7;
+  color: white;
+  padding: 18px 5%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+nav button {
+  border: none;
+  background: white;
+  color: #0b5ed7;
+  padding: 9px 14px;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-left: 5px;
+  font-weight: bold;
+}
+
+.hero {
+  background: linear-gradient(135deg, #0b5ed7, #063b8c);
+  color: white;
+  padding: 55px 5%;
+  text-align: center;
+}
+
+.hero h1 {
+  font-size: 38px;
+  margin-bottom: 12px;
+}
+
+.hero p {
+  margin-bottom: 25px;
+}
+
+.search-box {
+  max-width: 850px;
+  margin: auto;
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.search-box input,
+.search-box select {
+  flex: 1;
+  min-width: 180px;
+  padding: 14px;
+  border: none;
+  border-radius: 7px;
+}
+
+.search-box button {
+  padding: 14px 22px;
+  border: none;
+  border-radius: 7px;
+  background: #ffc107;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.container {
+  width: 90%;
+  max-width: 1150px;
+  margin: 30px auto;
+}
+
+.section-title {
+  margin-bottom: 20px;
+}
+
+.jobs {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+}
+
+.job-card {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 3px 12px rgba(0,0,0,.08);
+}
+
+.job-card h3 {
+  color: #0b5ed7;
+  margin-bottom: 8px;
+}
+
+.company {
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.info {
+  color: #666;
+  font-size: 14px;
+  margin: 7px 0;
+}
+
+.badge {
+  display: inline-block;
+  background: #e8f1ff;
+  color: #0b5ed7;
+  padding: 5px 8px;
+  border-radius: 5px;
+  font-size: 12px;
+  margin-top: 8px;
+}
+
+.apply-btn,
+.primary-btn {
+  background: #0b5ed7;
+  color: white;
+  border: none;
+  padding: 11px 15px;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-top: 15px;
+}
+
+.apply-btn:hover,
+.primary-btn:hover {
+  background: #084298;
+}
+
+.form-box {
+  background: white;
+  max-width: 600px;
+  margin: 30px auto;
+  padding: 25px;
+  border-radius: 10px;
+  box-shadow: 0 3px 15px rgba(0,0,0,.08);
+}
+
+.form-box h2 {
+  margin-bottom: 20px;
+}
+
+.form-box input,
+.form-box select,
+.form-box textarea {
+  width: 100%;
+  padding: 12px;
+  margin: 7px 0 14px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+.form-box textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+.switch {
+  color: #0b5ed7;
+  cursor: pointer;
+  margin-top: 15px;
+  display: inline-block;
+}
+
+.dashboard {
+  background: white;
+  padding: 25px;
+  border-radius: 10px;
+}
+
+.hidden {
+  display: none !important;
+}
+
+.empty {
+  text-align: center;
+  padding: 40px;
+  color: #777;
+}
+
+footer {
+  margin-top: 50px;
+  padding: 30px;
+  background: #17202a;
+  color: white;
+  text-align: center;
+}
+
+.alert {
+  padding: 12px;
+  border-radius: 6px;
+  margin: 10px 0;
+  background: #e9f7ef;
+  color: #176b3a;
+}
+
+.danger {
+  background: #fdecea;
+  color: #a61b1b;
+}
+
+@media(max-width:600px) {
+  .hero h1 {
+    font-size: 28px;
+  }
+
+  nav {
+    width: 100%;
+  }
+
+  nav button {
+    margin-top: 5px;
+  }
+}
 </style>
 </head>
+
 <body>
-<div id="authScreen" class="auth-wrap">
-<div style="text-align:center;margin-bottom:20px"><div style="font-size:42px;font-weight:900;color:#22c55e">APEX TRADE</div><div class="small">Kenya's Legit Trading Platform • Licensed Demo</div></div>
-<div class="auth-card">
-<div class="auth-tabs"><div id="tabLogin" class="active" onclick="switchAuth('login')">Sign In</div><div id="tabSignup" onclick="switchAuth('signup')">Sign Up</div></div>
-<div id="loginForm"><input id="loginEmail" class="input" type="email" placeholder="Email address"><input id="loginPass" class="input" type="password" placeholder="Password"><button class="btn btn-buy" onclick="doLogin()">Sign In & Trade</button></div>
-<div id="signupForm" style="display:none"><input id="suName" class="input" type="text" placeholder="Full Name"><input id="suEmail" class="input" type="email" placeholder="Email address"><input id="suPhone" class="input" type="tel" placeholder="MPESA Phone 07..."><input id="suPass" class="input" type="password" placeholder="Create Password min 4"><button class="btn btn-buy" onclick="doSignup()">Create Account - Get KSh 1,000 Demo</button></div>
-<div id="authMsg" class="small" style="text-align:center;margin-top:12px;color:#fbbf24;min-height:18px"></div>
-</div>
-</div>
-<div id="mainApp" style="display:none">
-<div class="install-banner" onclick="installApp()">📲 TAP TO INSTALL APP TO YOUR SCREEN</div>
-<div class="header"><div><div class="logo">APEX TRADE</div><div class="small" id="userName">Trader</div></div><div style="display:flex;gap:8px;align-items:center"><div class="balance" id="bal">KSh 1,000</div><button onclick="logout()" style="background:#334155;border:none;color:#fff;padding:6px 10px;border-radius:8px;font-size:12px">Logout</button></div></div>
-<div class="page" id="tradePage"><div class="card"><div style="display:flex;justify-content:space-between"><span><b>GOLD / USD</b> <span class="badge">LIVE</span></span><span id="change" style="color:#22c55e">+1.24%</span></div><div class="price" id="price">$2,045.30</div><div id="chart" style="height:100px;background:linear-gradient(to top,#22c55e22,transparent);border-radius:8px;margin:10px 0;display:flex;align-items:end;gap:2px;padding:6px"></div><div class="grid2"><button class="btn btn-buy" onclick="trade('buy')">BUY ▲</button><button class="btn" style="background:#ef4444;color:#fff" onclick="trade('sell')">SELL ▼</button></div></div><div class="card"><b>Open Positions: <span id="tradesCount">0</span></b><div id="trades" style="margin-top:8px"></div></div></div>
-<div class="page" id="fundsPage" style="display:none"><div class="card"><h3>Deposit - MPESA</h3><p class="small">Paybill: <b>522533</b> Acc: <b>7864202</b></p><input id="depAmt" class="input" type="number" placeholder="Amount KSh"><button class="btn btn-buy" onclick="deposit()">Confirm Deposit</button></div></div>
-<div class="page" id="morePage" style="display:none"><div class="card"><button class="btn btn-buy" onclick="installApp()">📲 Install to Home Screen</button></div><div class="card"><b>Share</b><br><small style="color:#60a5fa">https://toxcykim20-afk.github.io/APEX-TRADE/</small><br><button class="btn" style="background:#25D366;color:#fff" onclick="shareWA()">Share WhatsApp</button></div><div class="card"><b>Profile</b><br><span class="small">Name: <span id="pName"></span><br>Email: <span id="pEmail"></span></span></div></div>
-<div class="nav"><div id="n1" class="active" onclick="showPage('trade')">📈<br>Trade</div><div id="n2" onclick="showPage('funds')">💰<br>Funds</div><div id="n3" onclick="showPage('more')">☰<br>More</div></div>
-</div>
+
+<header>
+  <div class="logo">🔎 Changamwe Jobs</div>
+
+  <nav>
+    <button onclick="showPage('home')">Jobs</button>
+    <button onclick="showPage('post')">Post Job</button>
+    <button onclick="showPage('login')" id="loginNav">Login</button>
+    <button onclick="logout()" id="logoutNav" class="hidden">Logout</button>
+  </nav>
+</header>
+
+
+<!-- HOME -->
+<section id="homePage">
+
+  <div class="hero">
+    <h1>Find Jobs Near You</h1>
+    <p>Discover jobs and opportunities around Changamwe and Mombasa.</p>
+
+    <div class="search-box">
+      <input
+        id="searchInput"
+        type="text"
+        placeholder="Job title, company or keyword..."
+        oninput="filterJobs()"
+      >
+
+      <select id="locationFilter" onchange="filterJobs()">
+        <option value="">All locations</option>
+        <option>Changamwe</option>
+        <option>Chaani</option>
+        <option>Mikindani</option>
+        <option>Port Reitz</option>
+        <option>Jomvu</option>
+        <option>Mombasa CBD</option>
+        <option>Likoni</option>
+        <option>Nyali</option>
+      </select>
+
+      <select id="typeFilter" onchange="filterJobs()">
+        <option value="">All job types</option>
+        <option>Full-time</option>
+        <option>Part-time</option>
+        <option>Casual</option>
+        <option>Attachment</option>
+        <option>Internship</option>
+      </select>
+    </div>
+  </div>
+
+  <div class="container">
+
+    <h2 class="section-title">Latest Jobs</h2>
+
+    <div id="jobsContainer" class="jobs"></div>
+
+  </div>
+
+</section>
+
+
+<!-- LOGIN -->
+<section id="loginPage" class="hidden">
+
+  <div class="form-box">
+
+    <h2>Login</h2>
+
+    <div id="loginMessage"></div>
+
+    <input id="loginEmail" type="email" placeholder="Email address">
+
+    <input id="loginPassword" type="password" placeholder="Password">
+
+    <button class="primary-btn" onclick="login()">Login</button>
+
+    <p>
+      Don't have an account?
+      <span class="switch" onclick="showPage('signup')">
+        Create account
+      </span>
+    </p>
+
+  </div>
+
+</section>
+
+
+<!-- SIGNUP -->
+<section id="signupPage" class="hidden">
+
+  <div class="form-box">
+
+    <h2>Create Account</h2>
+
+    <input id="signupName" type="text" placeholder="Full name">
+
+    <input id="signupEmail" type="email" placeholder="Email address">
+
+    <input id="signupPhone" type="tel" placeholder="Phone number">
+
+    <select id="signupArea">
+      <option value="">Select your area</option>
+      <option>Changamwe</option>
+      <option>Chaani</option>
+      <option>Mikindani</option>
+      <option>Port Reitz</option>
+      <option>Jomvu</option>
+      <option>Mombasa CBD</option>
+      <option>Likoni</option>
+      <option>Nyali</option>
+    </select>
+
+    <select id="signupRole">
+      <option value="jobseeker">I'm looking for a job</option>
+      <option value="employer">I'm an employer</option>
+    </select>
+
+    <input id="signupPassword" type="password" placeholder="Password">
+
+    <input id="signupConfirm" type="password" placeholder="Confirm password">
+
+    <button class="primary-btn" onclick="signup()">
+      Create Account
+    </button>
+
+    <p>
+      Already have an account?
+      <span class="switch" onclick="showPage('login')">
+        Login
+      </span>
+    </p>
+
+  </div>
+
+</section>
+
+
+<!-- POST JOB -->
+<section id="postPage" class="hidden">
+
+  <div class="form-box">
+
+    <h2>Post a Job</h2>
+
+    <div id="postMessage"></div>
+
+    <input id="jobTitle" type="text" placeholder="Job title">
+
+    <input id="jobCompany" type="text" placeholder="Company / business name">
+
+    <select id="jobLocation">
+      <option value="">Select location</option>
+      <option>Changamwe</option>
+      <option>Chaani</option>
+      <option>Mikindani</option>
+      <option>Port Reitz</option>
+      <option>Jomvu</option>
+      <option>Mombasa CBD</option>
+      <option>Likoni</option>
+      <option>Nyali</option>
+    </select>
+
+    <select id="jobType">
+      <option>Full-time</option>
+      <option>Part-time</option>
+      <option>Casual</option>
+      <option>Attachment</option>
+      <option>Internship</option>
+    </select>
+
+    <input id="jobSalary" type="text" placeholder="Salary e.g. KES 20,000">
+
+    <input id="jobContact" type="text" placeholder="Application phone/email">
+
+    <textarea
+      id="jobDescription"
+      placeholder="Describe the job, requirements and responsibilities..."
+    ></textarea>
+
+    <button class="primary-btn" onclick="postJob()">
+      Publish Job
+    </button>
+
+  </div>
+
+</section>
+
+
+<!-- DASHBOARD -->
+<section id="dashboardPage" class="hidden">
+
+  <div class="container">
+
+    <div class="dashboard">
+
+      <h2>My Dashboard</h2>
+
+      <p id="welcomeUser"></p>
+
+      <br>
+
+      <h3>My Posted Jobs</h3>
+
+      <div id="myJobs"></div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- JOB DETAILS -->
+<section id="jobDetailsPage" class="hidden">
+
+  <div class="form-box">
+
+    <div id="jobDetails"></div>
+
+    <button class="primary-btn" onclick="showPage('home')">
+      ← Back to Jobs
+    </button>
+
+  </div>
+
+</section>
+
+
+<footer>
+  <p>© 2026 Changamwe Jobs Finder</p>
+  <p>Connecting job seekers with local employers.</p>
+</footer>
+
+
 <script>
-let price=2045.30;let bal=1000;let trades=[];let deferredPrompt=null;let currentUser=null;let users=[];
-try{currentUser=JSON.parse(localStorage.getItem('apex_current')||'null');users=JSON.parse(localStorage.getItem('apex_users')||'[]');}catch(e){localStorage.clear();}
-function switchAuth(t){document.getElementById('tabLogin').className=t=='login'?'active':'';document.getElementById('tabSignup').className=t=='signup'?'active':'';document.getElementById('loginForm').style.display=t=='login'?'block':'none';document.getElementById('signupForm').style.display=t=='signup'?'block':'none';document.getElementById('authMsg').textContent='';}
-function doSignup(){
- let name=document.getElementById('suName').value.trim();let email=document.getElementById('suEmail').value.trim().toLowerCase();let phone=document.getElementById('suPhone').value.trim();let pass=document.getElementById('suPass').value;let msg=document.getElementById('authMsg');
- if(!name||!email||!pass){msg.textContent='Fill all fields';return}
- if(pass.length<4){msg.textContent='Password min 4';return}
- try{users=JSON.parse(localStorage.getItem('apex_users')||'[]');}catch(e){users=[]}
- if(users.find(u=>u.email==email)){msg.textContent='Email exists, tap Sign In';switchAuth('login');return}
- let u={name,email,phone,pass,bal:1000,trades:[],id:'APX'+Math.floor(100000+Math.random()*900000)};
- users.push(u);localStorage.setItem('apex_users',JSON.stringify(users));localStorage.setItem('apex_current',JSON.stringify(u));currentUser=u;msg.textContent='Success! Opening...';setTimeout(()=>{enterApp();},500);
+
+let users = JSON.parse(localStorage.getItem("users")) || [];
+
+let jobs = JSON.parse(localStorage.getItem("jobs")) || [
+  {
+    id: 1,
+    title: "Warehouse Assistant",
+    company: "Mombasa Logistics",
+    location: "Changamwe",
+    type: "Full-time",
+    salary: "KES 18,000",
+    contact: "0712345678",
+    description:
+      "We are looking for a reliable warehouse assistant. Previous warehouse experience is an advantage.",
+    postedBy: "demo"
+  },
+
+  {
+    id: 2,
+    title: "Shop Attendant",
+    company: "Chaani Retail Shop",
+    location: "Chaani",
+    type: "Full-time",
+    salary: "KES 15,000",
+    contact: "0723456789",
+    description:
+      "Shop attendant needed. Good communication skills and honesty required.",
+    postedBy: "demo"
+  },
+
+  {
+    id: 3,
+    title: "Hotel Waiter",
+    company: "Coastal Hotel",
+    location: "Mombasa CBD",
+    type: "Part-time",
+    salary: "KES 12,000",
+    contact: "0734567890",
+    description:
+      "Looking for a friendly waiter to join our hospitality team.",
+    postedBy: "demo"
+  },
+
+  {
+    id: 4,
+    title: "Clearing & Forwarding Attachment",
+    company: "Coastal Freight Ltd",
+    location: "Changamwe",
+    type: "Attachment",
+    salary: "Negotiable",
+    contact: "0745678901",
+    description:
+      "Attachment opportunity for students interested in clearing and forwarding.",
+    postedBy: "demo"
+  }
+];
+
+let currentUser =
+  JSON.parse(localStorage.getItem("currentUser")) || null;
+
+
+/* SAVE DATA */
+
+function saveData() {
+  localStorage.setItem("users", JSON.stringify(users));
+  localStorage.setItem("jobs", JSON.stringify(jobs));
+
+  if (currentUser) {
+    localStorage.setItem(
+      "currentUser",
+      JSON.stringify(currentUser)
+    );
+  } else {
+    localStorage.removeItem("currentUser");
+  }
 }
-function doLogin(){
- let email=document.getElementById('loginEmail').value.trim().toLowerCase();let pass=document.getElementById('loginPass').value;let msg=document.getElementById('authMsg');
- if(!email||!pass){msg.textContent='Enter email & password';return}
- try{users=JSON.parse(localStorage.getItem('apex_users')||'[]');}catch(e){users=[]}
- let u=users.find(x=>x.email==email && x.pass==pass);
- if(!u){msg.textContent='Wrong password. Sign Up if new';return}
- localStorage.setItem('apex_current',JSON.stringify(u));currentUser=u;enterApp();
+
+
+/* PAGE NAVIGATION */
+
+function hideAllPages() {
+
+  document.getElementById("homePage").classList.add("hidden");
+  document.getElementById("loginPage").classList.add("hidden");
+  document.getElementById("signupPage").classList.add("hidden");
+  document.getElementById("postPage").classList.add("hidden");
+  document.getElementById("dashboardPage").classList.add("hidden");
+  document.getElementById("jobDetailsPage").classList.add("hidden");
+
 }
-function logout(){localStorage.removeItem('apex_current');location.reload();}
-function enterApp(){
- document.getElementById('authScreen').style.display='none';document.getElementById('mainApp').style.display='block';
- document.getElementById('userName').textContent=currentUser.name;document.getElementById('pName').textContent=currentUser.name;document.getElementById('pEmail').textContent=currentUser.email;
- document.getElementById('accId').textContent=currentUser.id;bal=currentUser.bal||1000;trades=currentUser.trades||[];updateBal();renderTrades();
+
+
+function showPage(page) {
+
+  hideAllPages();
+
+  if (page === "home") {
+    document.getElementById("homePage").classList.remove("hidden");
+    filterJobs();
+  }
+
+  if (page === "login") {
+    document.getElementById("loginPage").classList.remove("hidden");
+  }
+
+  if (page === "signup") {
+    document.getElementById("signupPage").classList.remove("hidden");
+  }
+
+  if (page === "post") {
+
+    if (!currentUser) {
+      alert("Please login as an employer to post a job.");
+      showPage("login");
+      return;
+    }
+
+    if (currentUser.role !== "employer") {
+      alert("Only employer accounts can post jobs.");
+      return;
+    }
+
+    document.getElementById("postPage").classList.remove("hidden");
+  }
+
+  if (page === "dashboard") {
+
+    if (!currentUser) {
+      showPage("login");
+      return;
+    }
+
+    document.getElementById("dashboardPage").classList.remove("hidden");
+
+    loadDashboard();
+  }
+
 }
-function saveUser(){if(!currentUser)return;currentUser.bal=bal;currentUser.trades=trades;localStorage.setItem('apex_current',JSON.stringify(currentUser));let idx=users.findIndex(u=>u.email==currentUser.email);if(idx>=0){users[idx]=currentUser;localStorage.setItem('apex_users',JSON.stringify(users));}}
-function updateBal(){let b=document.getElementById('bal');if(b)b.textContent='KSh '+bal.toFixed(2);document.querySelectorAll('.balText').forEach(e=>e.textContent='KSh '+bal.toFixed(2));saveUser();}
-function showPage(p){document.getElementById('tradePage').style.display=p=='trade'?'block':'none';document.getElementById('fundsPage').style.display=p=='funds'?'block':'none';document.getElementById('morePage').style.display=p=='more'?'block':'none';document.getElementById('n1').className=p=='trade'?'active':'';document.getElementById('n2').className=p=='funds'?'active':'';document.getElementById('n3').className=p=='more'?'active':'';}
-function trade(type){trades.push({id:Date.now(),type,entry:price,time:new Date().toLocaleTimeString()});renderTrades();saveUser();alert(type.toUpperCase()+' trade opened');setTimeout(()=>{let profit=(Math.random()*40-12);bal+=profit;updateBal();},2000);}
-function renderTrades(){let c=document.getElementById('tradesCount');if(c)c.textContent=trades.length;let el=document.getElementById('trades');if(el)el.innerHTML=trades.slice().reverse().map(t=>`<div style='padding:8px;border-bottom:1px solid #334155;display:flex;justify-content:space-between;font-size:13px'><span><b style='color:${t.type=='buy'?'#22c55e':'#ef4444'}'>${t.type.toUpperCase()}</b> @ $${t.entry.toFixed(2)}</span><span>${t.time}</span></div>`).join('')||'<small style=color:#94a3b8>No trades yet</small>';}
-function deposit(){let a=parseFloat(document.getElementById('depAmt').value);if(!a)return alert('Enter amount');bal+=a;updateBal();document.getElementById('depAmt').value='';alert('Deposit KSh '+a+' success!');}
-function shareWA(){let txt=encodeURIComponent('APEX TRADE Legit App 👉 https://toxcykim20-afk.github.io/APEX-TRADE/');window.open('https://wa.me/?text='+txt,'_blank');}
-function installApp(){if(deferredPrompt)deferredPrompt.prompt();else alert('Chrome ⋮ → Add to Home screen → Install');}
-window.addEventListener('beforeinstallprompt',e=>{e.preventDefault();deferredPrompt=e;});
-setInterval(()=>{price+=(Math.random()-0.5)*1.2;let el=document.getElementById('price');if(el)el.textContent='$'+price.toFixed(2);},1300);
-if(currentUser){enterApp();}
-let chart=document.getElementById('chart');if(chart){for(let i=0;i<28;i++){let b=document.createElement('div');b.style.flex='1';b.style.background='#22c55e';b.style.height=(30+Math.random()*60)+'%';b.style.borderRadius='2px';chart.appendChild(b);}setInterval(()=>{if(chart.children.length>0)chart.children[0].remove();let b=document.createElement('div');b.style.flex='1';b.style.background='#22c55e';b.style.height=(20+Math.random()*70)+'%';b.style.borderRadius='2px';chart.appendChild(b);},700);}
+
+
+/* SIGNUP */
+
+function signup() {
+
+  const name =
+    document.getElementById("signupName").value.trim();
+
+  const email =
+    document.getElementById("signupEmail").value.trim().toLowerCase();
+
+  const phone =
+    document.getElementById("signupPhone").value.trim();
+
+  const area =
+    document.getElementById("signupArea").value;
+
+  const role =
+    document.getElementById("signupRole").value;
+
+  const password =
+    document.getElementById("signupPassword").value;
+
+  const confirm =
+    document.getElementById("signupConfirm").value;
+
+
+  if (
+    !name ||
+    !email ||
+    !phone ||
+    !area ||
+    !password
+  ) {
+
+    alert("Please fill in all fields.");
+    return;
+
+  }
+
+
+  if (password !== confirm) {
+
+    alert("Passwords do not match.");
+    return;
+
+  }
+
+
+  if (password.length < 6) {
+
+    alert("Password must be at least 6 characters.");
+    return;
+
+  }
+
+
+  const exists =
+    users.find(user => user.email === email);
+
+
+  if (exists) {
+
+    alert("An account with this email already exists.");
+    return;
+
+  }
+
+
+  const user = {
+
+    id: Date.now(),
+
+    name,
+
+    email,
+
+    phone,
+
+    area,
+
+    role,
+
+    password
+
+  };
+
+
+  users.push(user);
+
+  currentUser = user;
+
+  saveData();
+
+  updateNavigation();
+
+  alert("Account created successfully!");
+
+  showPage("home");
+
+}
+
+
+/* LOGIN */
+
+function login() {
+
+  const email =
+    document.getElementById("loginEmail")
+      .value.trim()
+      .toLowerCase();
+
+  const password =
+    document.getElementById("loginPassword").value;
+
+
+  const user =
+    users.find(
+      u =>
+        u.email === email &&
+        u.password === password
+    );
+
+
+  if (!user) {
+
+    document.getElementById("loginMessage").innerHTML =
+      '<div class="alert danger">Invalid email or password.</div>';
+
+    return;
+
+  }
+
+
+  currentUser = user;
+
+  saveData();
+
+  updateNavigation();
+
+  alert("Welcome " + user.name + "!");
+
+  showPage("home");
+
+}
+
+
+/* LOGOUT */
+
+function logout() {
+
+  currentUser = null;
+
+  localStorage.removeItem("currentUser");
+
+  updateNavigation();
+
+  showPage("home");
+
+}
+
+
+/* NAVIGATION UPDATE */
+
+function updateNavigation() {
+
+  const loginNav =
+    document.getElementById("loginNav");
+
+  const logoutNav =
+    document.getElementById("logoutNav");
+
+
+  if (currentUser) {
+
+    loginNav.textContent = "Dashboard";
+
+    loginNav.onclick = function() {
+      showPage("dashboard");
+    };
+
+    logoutNav.classList.remove("hidden");
+
+  } else {
+
+    loginNav.textContent = "Login";
+
+    loginNav.onclick = function() {
+      showPage("login");
+    };
+
+    logoutNav.classList.add("hidden");
+
+  }
+
+}
+
+
+/* DISPLAY JOBS */
+
+function displayJobs(list) {
+
+  const container =
+    document.getElementById("jobsContainer");
+
+
+  if (list.length === 0) {
+
+    container.innerHTML =
+      '<div class="empty">No jobs found.</div>';
+
+    return;
+
+  }
+
+
+  container.innerHTML =
+    list.map(job => `
+
+      <div class="job-card">
+
+        <h3>${escapeHTML(job.title)}</h3>
+
+        <div class="company">
+          ${escapeHTML(job.company)}
+        </div>
+
+        <div class="info">
+          📍 ${escapeHTML(job.location)}
+        </div>
+
+        <div class="info">
+          💼 ${escapeHTML(job.type)}
+        </div>
+
+        <div class="info">
+          💰 ${escapeHTML(job.salary)}
+        </div>
+
+        <span class="badge">
+          ${escapeHTML(job.type)}
+        </span>
+
+        <br>
+
+        <button
+          class="apply-btn"
+          onclick="viewJob(${job.id})"
+        >
+          View & Apply
+        </button>
+
+      </div>
+
+    `).join("");
+
+}
+
+
+/* FILTER */
+
+function filterJobs() {
+
+  const search =
+    document.getElementById("searchInput")
+      .value
+      .toLowerCase();
+
+  const location =
+    document.getElementById("locationFilter")
+      .value;
+
+  const type =
+    document.getElementById("typeFilter")
+      .value;
+
+
+  const filtered =
+    jobs.filter(job => {
+
+      const matchesSearch =
+
+        job.title.toLowerCase().includes(search) ||
+
+        job.company.toLowerCase().includes(search) ||
+
+        job.description.toLowerCase().includes(search);
+
+
+      const matchesLocation =
+        !location ||
+        job.location === location;
+
+
+      const matchesType =
+        !type ||
+        job.type === type;
+
+
+      return (
+        matchesSearch &&
+        matchesLocation &&
+        matchesType
+      );
+
+    });
+
+
+  displayJobs(filtered);
+
+}
+
+
+/* VIEW JOB */
+
+function viewJob(id) {
+
+  const job =
+    jobs.find(j => j.id === id);
+
+
+  if (!job) return;
+
+
+  document.getElementById("jobDetails").innerHTML = `
+
+    <h2>${escapeHTML(job.title)}</h2>
+
+    <p class="company">
+      ${escapeHTML(job.company)}
+    </p>
+
+    <p class="info">
+      📍 ${escapeHTML(job.location)}
+    </p>
+
+    <p class="info">
+      💼 ${escapeHTML(job.type)}
+    </p>
+
+    <p class="info">
+      💰 ${escapeHTML(job.salary)}
+    </p>
+
+    <hr><br>
+
+    <h3>Job Description</h3>
+
+    <p style="margin-top:10px;">
+      ${escapeHTML(job.description)}
+    </p>
+
+    <br>
+
+    <h3>How to Apply</h3>
+
+    <p style="margin-top:10px;">
+      Contact the employer:
+    </p>
+
+    <strong>${escapeHTML(job.contact)}</strong>
+
+    <br>
+
+    <button
+      class="primary-btn"
+      onclick="applyForJob(${job.id})"
+    >
+      Apply for this Job
+    </button>
+
+  `;
+
+
+  hideAllPages();
+
+  document
+    .getElementById("jobDetailsPage")
+    .classList.remove("hidden");
+
+}
+
+
+/* APPLY */
+
+function applyForJob(id) {
+
+  if (!currentUser) {
+
+    alert(
+      "Please create an account or login before applying."
+    );
+
+    showPage("login");
+
+    return;
+
+  }
+
+
+  const job =
+    jobs.find(j => j.id === id);
+
+
+  if (!job) return;
+
+
+  alert(
+    "Application started!\n\n" +
+    "Job: " + job.title +
+    "\nEmployer contact: " + job.contact
+  );
+
+}
+
+
+/* POST JOB */
+
+function postJob() {
+
+  if (!currentUser ||
+      currentUser.role !== "employer") {
+
+    alert("Employer account required.");
+    return;
+
+  }
+
+
+  const title =
+    document.getElementById("jobTitle")
+      .value.trim();
+
+  const company =
+    document.getElementById("jobCompany")
+      .value.trim();
+
+  const location =
+    document.getElementById("jobLocation")
+      .value;
+
+  const type =
+    document.getElementById("jobType")
+      .value;
+
+  const salary =
+    document.getElementById("jobSalary")
+      .value.trim();
+
+  const contact =
+    document.getElementById("jobContact")
+      .value.trim();
+
+  const description =
+    document.getElementById("jobDescription")
+      .value.trim();
+
+
+  if (
+    !title ||
+    !company ||
+    !location ||
+    !salary ||
+    !contact ||
+    !description
+  ) {
+
+    alert("Please complete all job fields.");
+    return;
+
+  }
+
+
+  const newJob = {
+
+    id: Date.now(),
+
+    title,
+
+    company,
+
+    location,
+
+    type,
+
+    salary,
+
+    contact,
+
+    description,
+
+    postedBy: currentUser.email
+
+  };
+
+
+  jobs.unshift(newJob);
+
+  saveData();
+
+
+  document.getElementById("postMessage").innerHTML =
+    '<div class="alert">Job published successfully!</div>';
+
+
+  document.getElementById("jobTitle").value = "";
+  document.getElementById("jobCompany").value = "";
+  document.getElementById("jobSalary").value = "";
+  document.getElementById("jobContact").value = "";
+  document.getElementById("jobDescription").value = "";
+
+
+  setTimeout(() => {
+
+    showPage("home");
+
+  }, 800);
+
+}
+
+
+/* DASHBOARD */
+
+function loadDashboard() {
+
+  document.getElementById("welcomeUser").textContent =
+    "Welcome, " + currentUser.name;
+
+
+  const myJobs =
+    jobs.filter(
+      job => job.postedBy === currentUser.email
+    );
+
+
+  const container =
+    document.getElementById("myJobs");
+
+
+  if (myJobs.length === 0) {
+
+    container.innerHTML =
+      "<p>No jobs posted yet.</p>";
+
+    return;
+
+  }
+
+
+  container.innerHTML =
+    myJobs.map(job => `
+
+      <div class="job-card" style="margin-top:15px;">
+
+        <h3>${escapeHTML(job.title)}</h3>
+
+        <p>${escapeHTML(job.location)}</p>
+
+        <button
+          class="apply-btn"
+          onclick="deleteJob(${job.id})"
+        >
+          Delete
+        </button>
+
+      </div>
+
+    `).join("");
+
+}
+
+
+/* DELETE JOB */
+
+function deleteJob(id) {
+
+  if (!confirm("Delete this job?")) return;
+
+
+  jobs =
+    jobs.filter(job => job.id !== id);
+
+
+  saveData();
+
+  loadDashboard();
+
+  filterJobs();
+
+}
+
+
+/* SECURITY */
+
+function escapeHTML(value) {
+
+  return String(value)
+
+    .replaceAll("&", "&amp;")
+
+    .replaceAll("<", "&lt;")
+
+    .replaceAll(">", "&gt;")
+
+    .replaceAll('"', "&quot;")
+
+    .replaceAll("'", "&#039;");
+
+}
+
+
+/* INITIALIZE */
+
+updateNavigation();
+
+filterJobs();
+
 </script>
+
 </body>
 </html>
